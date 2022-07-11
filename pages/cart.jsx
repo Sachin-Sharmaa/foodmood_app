@@ -24,7 +24,7 @@ const Cart = () => {
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("https://foodmood-hs8xo36k0-sachin-sharmaa.vercel.app/api/orders", data);
+      const res = await axios.post("https://foodmood-app.vercel.app/api/orders", data);
       if (res.status == 201) {
         dispatch(reset());
         router.push(`/order/${res.data._id}`);
