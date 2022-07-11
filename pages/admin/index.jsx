@@ -10,7 +10,7 @@ const Index = ({ orders, dishes }) => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete("http://localhost:3000/api/dishes/" + id);
+      const res = await axios.delete("https://foodmood-hs8xo36k0-sachin-sharmaa.vercel.app/api/dishes/" + id);
       setDishList(dishList.filter((dish) => dish._id !== id));
     } catch (err) {
       console.log(err);
@@ -21,7 +21,7 @@ const Index = ({ orders, dishes }) => {
     const item = orderList.filter((order) => order._id === id)[0];
     const currentStatus = item.status;
     try {
-      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
+      const res = await axios.put("https://foodmood-hs8xo36k0-sachin-sharmaa.vercel.app/api/orders/" + id, {
         status: currentStatus + 1,
       });
       setOrderList ([
@@ -124,8 +124,8 @@ export const getServerSideProps = async (ctx) => {
       }
     }
   }
-  const dishRes = await axios.get("http://localhost:3000/api/dishes");
-  const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const dishRes = await axios.get("https://foodmood-hs8xo36k0-sachin-sharmaa.vercel.app/api/dishes");
+  const orderRes = await axios.get("https://foodmood-hs8xo36k0-sachin-sharmaa.vercel.app/api/orders");
 
   return {
     props: {
