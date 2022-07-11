@@ -88,7 +88,7 @@ const Order = ({order}) => {
 
 export const getServerSideProps = async ({params}) => {
 	try {
-		const res = await axios.get(`https://foodmood-hs8xo36k0-sachin-sharmaa.vercel.app/api/orders/${params.id}`);
+		const res = await axios.get(`https://foodmood-app.vercel.app/api/orders/${params.id}`);
 		return {
 			props: {order: res.data}
 		};
