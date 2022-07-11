@@ -88,7 +88,7 @@ const Dish = ({dish}) => {
 }
 
 export const getServerSideProps = async ({params}) => {
-  const res = await axios.get(`https://foodmood-hs8xo36k0-sachin-sharmaa.vercel.app/api/dishes/${params.id}`);
+  const res = await axios.get(`https://foodmood-app.vercel.app/api/dishes/${params.id}`);
   return {
     props: {
       dish: res.data
