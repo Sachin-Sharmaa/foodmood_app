@@ -44,7 +44,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post("http://localhost:3000/api/dishes", newDish);
+      await axios.post("https://foodmood-hs8xo36k0-sachin-sharmaa.vercel.app/api/dishes", newDish);
       setClose(true);
     } catch (err) {
       console.log(err);
