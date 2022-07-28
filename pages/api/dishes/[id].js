@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 			res.status(200).json(dish);
 		}
 		catch(err) {
-			res.status("error").json(err);
+			res.status(500).json(err);
 		}
 	}
 
