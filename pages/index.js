@@ -33,7 +33,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get('/api/dishes');
+  const res = await axios.get('https://foodmood-app.vercel.app/api/dishes');
   console.log(res);
   return {
     props: {
